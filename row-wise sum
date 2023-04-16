@@ -1,0 +1,54 @@
+import java.util.*;
+public class Main
+{
+    public static void 	rowisesum(int [][]arr)
+    {
+        int temp[]=new int[arr.length];
+        for(int i=0;i<arr.length;i++)
+        {
+            int sum=0;
+            
+            for(int j=0;j<arr[0].length;j++)
+            {
+                sum+=arr[i][j];
+            }
+            temp[i]=sum;
+        }
+        System.out.print("row-wise sum is:");
+        for(int k=0;k<temp.length;k++)
+        {
+            System.out.print(temp[k]+" ");
+        }
+        
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("enter row & column ");
+	    int r=sc.nextInt();
+	    int c=sc.nextInt();
+	    
+		int arr[][]=new int[r][c];
+	System.out.println("enter array elements");
+	// inout 2d array
+	for(int i=0;i<r;i++)
+	{
+	    for(int j=0;j<c;j++)
+	    {
+	        arr[i][j]=sc.nextInt();
+	        
+	    }
+	}
+	
+	rowisesum(arr);
+	//print 2d ARARY 
+// 	for(int i=0;i<r;i++)
+// 	{
+// 	    for(int j=0;j<c;j++)
+// 	    {
+// 	       System.out.print(arr[i][j]+" ");
+	        
+// 	    }
+// 	}
+	
+	}
+}
