@@ -1,0 +1,54 @@
+// maximum column sum
+import java.util.*;
+public class Main
+{
+    public static void 	colwisesum(int [][]arr)
+    {
+        int max=Integer.MIN_VALUE;
+        
+       
+        for(int i=0;i<arr[0].length;i++)
+        {
+            int sum=0;
+            
+            for(int j=0;j<arr.length;j++)
+            {
+                sum+=arr[j][i];
+            }
+            if(sum>max)
+                max=sum;
+        }
+        System.out.print("max col sum is:"+max);
+      
+        
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("enter row & column ");
+	    int r=sc.nextInt();
+	    int c=sc.nextInt();
+	    
+		int arr[][]=new int[r][c];
+	System.out.println("enter array elements");
+	// inout 2d array
+	for(int i=0;i<r;i++)
+	{
+	    for(int j=0;j<c;j++)
+	    {
+	        arr[i][j]=sc.nextInt();
+	        
+	    }
+	}
+	
+	colwisesum(arr);
+	//print 2d ARARY 
+// 	for(int i=0;i<r;i++)
+// 	{
+// 	    for(int j=0;j<c;j++)
+// 	    {
+// 	       System.out.print(arr[i][j]+" ");
+	        
+// 	    }
+// 	}
+	
+	}
